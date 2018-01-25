@@ -3,11 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.html -d docs"
+    "dev": "webpack-dev-server --inline --hot --no-info --content-base docs/",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
-    "node-sass": "^4.7.2"
+    "cross-env": "^5.0.5",
+    "npm-run-all": "^4.0.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.8.1"
   },
   "dependencies": {
     "pixi.js": "^4.7.0"
